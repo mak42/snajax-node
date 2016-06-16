@@ -5,7 +5,6 @@ This Library can make GlideAjax Requests, with this possibilty you can execute S
 **Example Usage**
 
 ```javascript
-
 var snajax = require('./sn-ajax.js');
 var client = new snajax.SnAjaxClient({
     host: 'demo.service-now.com',
