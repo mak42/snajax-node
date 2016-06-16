@@ -1,0 +1,22 @@
+{
+    "name": "sn-ajax",
+    "version": "0.0.1",
+    "tags": [
+        "service-now"
+    ],
+    "author": {
+        "name": "Martin Kirchweger",
+        "email": "kirchweger.mak@gmail.com"
+    },
+    "description": "NodeJS Ajax-Client for Service-Now",
+    "main": "sn-ajax.js",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mak42/sn-ajax"
+    },
+    "dependencies": {
+        "request": "*",
+        "xml2js": "*"
+    }
+}
