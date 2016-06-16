@@ -2,6 +2,8 @@
 NodeJS Service-Now Ajax Library
 This Library can make GlideAjax Requests, with this possibilty you can execute Server-Side Code.
 
+**Example Usage**
+
 ```javascript
 
 var snajax = require('./sn-ajax.js');
