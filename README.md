@@ -11,16 +11,25 @@ var client = new snajax.SnAjaxClient({
     user: 'admin',
     pass: 'admin'
 });
-client.login(function (token) {
-    console.log(token);
 
-    var script = 'gs.log("test")';
-    var params = {
-        'sysparm_script': script
-    };
-    client.glideAjax('SPScriptEval', 'evaljs', params, function (err, res) {
+client.login()
+    .then(function (token) {
+        var scope = "d98af49e0f023200547906ace1050e74";
+        var script = "gs.print('test')";
+        return client.evalScript(script, scope);
+    }).then(function(res) {
         console.log(res);
     });
-});
+
+client.login()
+    .then(function (token) {
+        var incidentSysId = "e98af49e0f0245204547906ace1200e8";
+        var params = {
+            'sysparm_sys_id': incidentSysId
+        };
+        return client.glideAjax('SPScriptEval', 'evaljs');
+    }).then(function(answer) {
+        console.log(answer);
+    });
 
 ```
